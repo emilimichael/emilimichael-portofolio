@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer utilities {
+	.text-balance {
+		text-wrap: balance;
+	}
+}
+body {
+	background: rgb(255, 0, 181);
+	background: linear-gradient(
+		138deg,
+		rgba(255, 0, 181, 1) 0%,
+		rgba(255, 119, 216, 1) 20%,
+		rgba(255, 193, 237, 1) 54%,
+		rgba(255, 225, 246, 1) 80%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
