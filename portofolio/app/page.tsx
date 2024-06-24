@@ -1,5 +1,7 @@
 'use client'
 import About from "@/components/About";
+import ExperienceCard from "@/components/Experience/ExperienceCard";
+import ExperienceSection from "@/components/Experience/ExperienceSection";
 import Hero from "@/components/Hero";
 import SkillList from "@/components/Skills/SkillList";
 import dynamic from "next/dynamic";
@@ -24,7 +26,7 @@ export default function Home() {
               <Hero />
               <About />
               <SkillList/>
-
+              <ExperienceSection/>
               <div
                   ref={div1Ref}
                   className="h-[1000px] bg-red-200">
