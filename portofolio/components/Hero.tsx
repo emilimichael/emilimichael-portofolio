@@ -3,11 +3,13 @@ import Button from "./Button";
 
 export default function Hero() {
   return (
-    <section className="Hero flex flex-row gap-2 md:gap-8 justify-center container mx-6  w-full ">
+    <section className="Hero flex flex-row gap-2 md:gap-8 justify-center  mx-6 ">
       <div className="flex flex-col gap-4 justify-center">
         <div>
-          <h1 className="text-2xl pl-1 md:text-3xl font-bold pb-2">Hello! I&apos;m Emili.</h1>
-          <h3 className="text-l pl-1 md:text-xl font-normal">
+          <h1 className="text-2xl pl-1 md:text-4xl lg:text-6xl font-bold pb-2">
+            Hello! I&apos;m Emili.
+          </h1>
+          <h3 className="text-l pl-1 md:text-xl lg:text-2xl font-normal">
             I&apos;m a Front End Engineer.
           </h3>
         </div>
@@ -21,7 +23,7 @@ export default function Hero() {
         alt="Picture of Emili Michael"
         width={800}
         height={800}
-        className="size-[125px] sm:size-[150px] md:size-[250px] rounded-full my-5"
+        className="size-[125px] sm:size-[175px] md:size-[250px] rounded-full my-5"
       />
     </section>
   );
