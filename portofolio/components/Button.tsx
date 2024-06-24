@@ -2,7 +2,7 @@ import classNames from "classnames";
 
 interface ButtonProps {
   text: string;
-  variant?: "filled" | "outline";
+  variant: "filled" | "outline";
 }
 
 export default function Button(props: ButtonProps) {

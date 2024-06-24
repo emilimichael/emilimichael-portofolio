@@ -21,3 +21,19 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
+
+@layer components {
+  .navbar-slide-in {
+    @apply transform translate-y-full;
+    animation: slideIn 0.7s forwards;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+}
