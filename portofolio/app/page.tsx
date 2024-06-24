@@ -1,6 +1,7 @@
 'use client'
 import About from "@/components/About";
 import Hero from "@/components/Hero";
+import SkillList from "@/components/Skills/SkillList";
 import dynamic from "next/dynamic";
 import { useRef } from "react";
 
@@ -22,6 +23,7 @@ export default function Home() {
           <div className="flex flex-col gap-44">
               <Hero />
               <About />
+              <SkillList/>
 
               <div
                   ref={div1Ref}
