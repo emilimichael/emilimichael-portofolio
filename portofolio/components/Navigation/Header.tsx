@@ -5,7 +5,7 @@ import Image from "next/image";
 
 
 type HeaderProps = {
-    sectionRefs: React.RefObject<HTMLDivElement | null>[];
+    sectionIDs: string[];
 }
 export default function Header(props: HeaderProps) {
     const [isVisible, setIsVisible] = useState(false);
@@ -26,16 +26,18 @@ export default function Header(props: HeaderProps) {
        setIsOpen((prevState) => !prevState);
      };
 
-    const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
-    if (ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth" });
+    const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      
+      element.scrollIntoView({ behavior: "smooth" });
       toggleIsOpen();
       }
     };
 
   return (
     <header
-      className={`bg-white w-full shadow-xl mb-12   ${
+      className={`bg-white w-full shadow-xl mb-12 sticky top-0 z-10 ${
         isVisible ? "navbar-slide-in " : ""
       }`}
     >
@@ -57,7 +59,7 @@ export default function Header(props: HeaderProps) {
             <NavItem
               key={item.id}
               text={item.text}
-              onClick={() => scrollToSection(props.sectionRefs[index])}
+              onClick={() => scrollToSection(props.sectionIDs[index])}
             />
           ))}
         </ul>
@@ -68,7 +70,7 @@ export default function Header(props: HeaderProps) {
             <NavItem
               key={item.id}
               text={item.text}
-              onClick={() => scrollToSection(props.sectionRefs[index])}
+              onClick={() => scrollToSection(props.sectionIDs[index])}
             />
           ))}
         </ul>

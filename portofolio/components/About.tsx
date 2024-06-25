@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function About() {
     return (
-      <section className="flex flex-col-reverse gap-8 lg:flex-row container items-center justify-evenly mx-auto">
+      <section id="about-section" className="flex flex-col-reverse gap-8 lg:flex-row container items-center justify-evenly mx-auto scroll-mt-20">
         <Image
           src="/chibigirl.png"
           height={400}
