@@ -9,7 +9,11 @@ export type ExperienceCardProps = {
 
 export default function ExperienceCard(props: ExperienceCardProps) {
   return (
-    <li className="flex pb-20 relative justify-center gap-4">
+    <li
+      className={`flex pb-20 relative justify-center gap-4 ${
+        props.isLast ? "pb-0 " : "pb-20"
+      }`}
+    >
       <div
         className={`h-2 w-2 rounded-full bg-gray-400 before:absolute before:w-0.5 before:ml-[3px] before:bg-gray-400 ${
           props.isLast ? "before:h-0 " : "before:h-full"
@@ -26,7 +30,9 @@ export default function ExperienceCard(props: ExperienceCardProps) {
           {props.points && props.points.length > 0 && (
             <ul className="list-inside">
               {props.points.map((item, index) => (
-                <li className="text-xs md:text-sm list-disc mb-2" key={index}>{item}</li>
+                <li className="text-xs md:text-sm list-disc mb-2" key={index}>
+                  {item}
+                </li>
               ))}
             </ul>
           )}
