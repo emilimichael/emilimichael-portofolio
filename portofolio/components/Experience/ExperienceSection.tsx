@@ -3,7 +3,7 @@ import { experienceData } from "./experienceData";
 
 export default function ExperienceSection() {
     return (
-      <section className="flex flex-col gap-10 justify-center items-center container">
+      <section id="experience-section" className="flex flex-col gap-10 justify-center items-center container">
         <h2 className="text-xl md:text-2xl lg:text-3xl font-bold">
           My Experience
         </h2>
