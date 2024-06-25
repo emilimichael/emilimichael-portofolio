@@ -29,6 +29,7 @@ export default function Header(props: HeaderProps) {
     const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
+      
       element.scrollIntoView({ behavior: "smooth" });
       toggleIsOpen();
       }
@@ -36,7 +37,7 @@ export default function Header(props: HeaderProps) {
 
   return (
     <header
-      className={`bg-white w-full shadow-xl mb-12   ${
+      className={`bg-white w-full shadow-xl mb-12 sticky top-0 z-10 ${
         isVisible ? "navbar-slide-in " : ""
       }`}
     >
