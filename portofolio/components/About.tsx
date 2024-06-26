@@ -44,7 +44,7 @@ export default function About() {
               world.
             </p>
             <p>
-              Currently, I am employed at Emma, but I am open to exploring new
+              Currently, I am open to exploring new
               opportunities where I can contribute my skills and grow as a
               developer.
             </p>
